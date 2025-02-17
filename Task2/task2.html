@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <aside class="w-64 bg-red-800 fixed h-full left-0 top-0 z-10 transition-transform -translate-x-full sm:translate-x-0" id="sidebar">
+        <div class="p-4">
+            <h2 class="text-white font-bold text-2xl mb-4">Dashboard</h2>
+            <ul>
+                <li class="mb-2">
+                    <a href="#" class="text-white hover:text-red-200 block p-2 rounded-md">Dashboard</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#" class="text-white hover:text-red-200 block p-2 rounded-md">Users</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#" class="text-white hover:text-red-200 block p-2 rounded-md">Products</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#" class="text-white hover:text-red-200 block p-2 rounded-md">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="ml-0 sm:ml-64 transition-all duration-300">
+        <header class="bg-white p-4 shadow-md flex justify-between items-center">
+            <div class="flex items-center">
+                <button id="menu-toggle" class="sm:hidden text-gray-500 hover:text-gray-700 mr-2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+                <h1 class="text-2xl font-bold">Main Dashboard</h1>
+            </div>
+            <div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 19.237a48.103 48.103 0 00-.547-3.974c0-.317-.113-.635-.31-.906l-2.29-2.29c-.79-.79-.79-2.057 0-2.847l2.29-2.29c.197-.27.31-.588.31-.906 0-.317-.113-.635-.31-.906l-2.29-2.29c-.79-.79-.79-2.057 0-2.847l2.29-2.29c.197-.27.31-.588.31-.906 0-.317-.113-.635-.31-.906a48.103 48.103 0 00-.547-3.974m12 0c.196.27.31.588.31.906 0 .317-.113.635-.31.906l-2.29 2.29c-.79.79-.79 2.057 0 2.847l2.29 2.29c.197.27.31.588.31.906 0 .317-.113.635-.31.906l-2.29 2.29c-.79.79-.79 2.057 0 2.847l2.29 2.29c.197.27.31.588.31.906 0 .317-.113.635-.31-.906a48.103 48.103 0 00-.547 3.974" />
+</svg>
+
+                    </button>
+                    <div class="relative">
+                        <button class="focus:outline-none">
+                            <img src="pro.jpg" alt="User Avatar" class="w-8 h-8 rounded-full">
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mx-auto p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 1</h3>
+                    <p>Some content for card 1.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 2</h3>
+                    <p>Some content for card 2.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 3</h3>
+                    <p>Some content for card 3.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 4</h3>
+                    <p>Some content for card 4.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 5</h3>
+                    <p>Some content for card 5.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 6</h3>
+                    <p>Some content for card 6.</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full'); // Toggle the sidebar visibility
+        });
+    </script>
+
+</body>
+</html>
